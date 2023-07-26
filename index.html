@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- font-family -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+          font-family: 'Lato', sans-serif;
+          box-sizing: border-box;
+          margin: 0%;
+          padding: 0%;
+        }
+        h1,h2,h3,h4,h5,h6{
+          font-weight: bold;
+        }
+        p{
+          font-size: 0.8rem;
+        }
+        header{
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        main{
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+         a{
+            color: white;
+            text-decoration: none;
+            font-size: large;
+            margin-right: 20px;
+         }
+        li{
+            list-style: none;
+        }
+        .carousel-caption{
+           margin-bottom: 100px;
+        }
+        .fruits_position img{
+          width: 14%;
+        }
+        .deal_of_the_day p{
+          color: rgba(18, 18, 18, 0.60);
+        }
+        .deal_of_the_day_time h1{
+             margin-right: 10px;
+        }
+        .time img{
+          height: 50px;
+        }
+        .card{
+          padding: 30px 0;
+          height: 350px;
+        }
+        .card h6{
+          font-weight: bolder;
+          border-bottom: 1px solid rgb(236, 236, 236);
+          padding-bottom: 10px;
+        }
+        .card p{
+          color: rgba(18, 18, 18, 0.60);
+        }
+        .card img{
+          width: 35%;
+        }
+        .fa{
+          color: #F85559;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+        }
+        .card a{
+          text-decoration: none;
+          color: #F85559;
+        }
+
+        .team_member img{
+          width: 50%;
+        }
+        .team_member p{
+          font-weight: bolder;
+        }
+        .team p{
+          color: white;
+          font-size: 0.7rem;
+        }
+
+        .team{
+          background-image: linear-gradient( 94.3deg,  rgba(26,33,64,0.6) 10.9%, rgba(81,84,115,0.8) 87.1% ), url("images/team.png") ;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .team_social .fa{
+          color: white;
+          font-size: 1rem;
+          margin-right: 4px;
+          background-color: #F85559;
+          border-radius: 50%;
+          padding: 3px 6px;
+        }
+
+        .footer_link a{
+          font-size: 0.7rem;
+        }
+
+      .footer_social .fa{
+        margin: 0 8px;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .why_choose_us .item{
+        display: flex;
+        align-items: center;
+      }
+      .why_choose_us_left img{
+        margin-right: 15px;
+        width: 15%;
+      }
+      .why_choose_us_right img{
+        margin-right: 15px;
+        width: 15%;
+      }
+      .why_choose_us_right img{
+        margin-left: 15px;
+      }
+      .why_choose_us_desc h3{
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        border-bottom: 1px solid rgb(235, 235, 235);
+      }
+
+      /* hr{
+        width: 100px;
+      } */
+ 
+      .why_choose_us p{
+        color: rgb(106, 106, 106);
+        font-size: 0.8rem;
+      }
+    </style>
+    
+  </head>
+  <body>
+
+  <header>
+                                     <!-- navbar  -->
+   <br><br>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="">All Fruits</a></li>
+        </ul>
+      </div>
+      <a href="" class="navbar-brand">
+         <img src="images/logo.png" alt="">
+         <span>Fruit Burst</span>
+      </a>
+
+      <input type="search">
+    </nav>
+       <br><br>
+                                    <!-- banner -->
+     <section class="banner position-relative">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/banner1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block mb-7">
+              <h1 class="fs-1 fw-bolder">Exotic tastes at your <br> doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button type="button" class="btn btn-danger">Shop Now</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="fs-1 fw-bolder">Exotic tastes at your <br> doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button type="button" class="btn btn-danger">Shop Now</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="fs-1 fw-bolder">Exotic tastes at your <br> doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button type="button" class="btn btn-danger">Shop Now</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner4.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="fs-1 fw-bolder">Exotic tastes at your <br> doorstep</h1>
+              <p>We supply highly quality organic products</p>
+              <button type="button" class="btn btn-danger">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="fruits_position bg-light d-flex justify-content-around w-50 position-absolute top-100 start-50 translate-middle rounded p-3">
+            <img src="images/fruit1.png" alt="">
+            <img src="images/fruit2.png" alt="">
+            <img src="images/fruit4.png" alt="">
+            <img src="images/fruit5.png" alt="">
+      </div>
+     </section>
+    
+      <br><br><br><br><br><br>
+
+  </header>
+
+                                 
+  <main>
+                    <!-- deal_of_the_day -->
+        <div class="deal_of_the_day">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="deal_of_the_day_desc">
+                  <h3>Deal of the day</h3>
+                  <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+                 </div>
+              </div>
+              <div class="col-md-6">
+                 <div class="time d-flex justify-content-end">
+                    <div>
+                       <h1>29</h1>
+                       <p>Days</p>
+                    </div>
+                    <img src="images/Frame.png" alt="">
+                    <div>
+                       <h1>15</h1>
+                       <p>Hours</p>
+                    </div>
+                    <img src="images/Frame.png" alt="">
+                    <div>
+                       <h1>25</h1>
+                       <p>Minutes</p>
+                    </div>
+                    <img src="images/Frame.png" alt="">
+                    <div>
+                       <h1>08</h1>
+                       <p>Seconds</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+       <br><br>
+                      <!-- card -->
+         <div class="row row-cols-1 row-cols-md-4 g-3  text-center">
+          <div class="col">
+            <div class="card d-flex align-items-center">
+              <img src="images/fruit9.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">12.90$ - 18.85$</h6>
+                <p class="card-text">Banana</p>
+                <div class="icon">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <a href="">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-flex align-items-center">
+              <img src="images/fruit3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">12.90$ - 18.85$</h6>
+                <p class="card-text">Mango</p>
+                <div class="icon">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <a href="">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-flex align-items-center">
+              <img src="images/fruit7.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">12.90$ - 18.85$</h6>
+                <p class="card-text">Orange</p>
+                <div class="icon">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <a href="">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card d-flex align-items-center">
+              <img src="images/fruit8.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">12.90$ - 18.85$</h6>
+                <p class="card-text">Red Dragon</p>
+                <div class="icon">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <a href="">details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br><br><br><br>
+                                        <!-- team member-->
+
+        <section class="team text-center">
+           <div class="container p-5">
+             <div class="row">
+                <div class="col">
+                  <div class="team_content">
+                    <h3 class="text-light bolder">Meet the team section</h3>
+                    <p class="text-light">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+                  </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-3">
+                   <div class="team_member">
+                      <img src="images/member1.png" alt="">
+                      <h6 class="text-light">Awlad Hossain</h6>
+                      <p>Fruits Expert</p>
+                      <div class="team_social">
+                         <i class="fa fa-facebook" aria-hidden="true"></i>
+                         <i class="fa fa-twitter" aria-hidden="true"></i>
+                         <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-3">
+                   <div class="team_member">
+                      <img src="images/member2.png" alt="">
+                      <h6 class="text-light">Safia Chowdhury</h6>
+                      <p>Fruits Expert</p>
+                      <div class="team_social">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     </div>
+                   </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="team_member">
+                    <img src="images/member3.png" alt="">
+                    <h6 class="text-light">Rokib Hossain</h6>
+                    <p>Fruits Expert</p>
+                    <div class="team_social">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="team_member">
+                    <img src="images/member4.png" alt="">
+                    <h6 class="text-light">Chaity</h6>
+                    <p>Fruits Expert</p>
+                    <div class="team_social">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                   </div>
+                  </div>
+                </div>
+             </div>
+           </div>
+        </section>
+        <br><br><br><br><br><br>
+                                      <!-- why_choose_us -->
+
+        <section class="why_choose_us text-center">
+            <h2 class="text-bolder">Why Choose Us</h2>
+            <p class="">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="row">
+              <div class="col-md-4">
+                 <div class="why_choose_us_left text-start">
+                    <div class="item">
+                       <img src="images/1.png" alt="">
+                       <div class="why_choose_us_desc">
+                          <h3>Dedicated Team</h3>
+          
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                       </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/2.png" alt="">
+                        <div class="why_choose_us_desc">
+                          <h3>Dedicated Team</h3>
+                    
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                       </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/3.png" alt="">
+                      <div class="why_choose_us_desc">
+                        <h3>Dedicated Team</h3>
+                     
+                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                     </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="why_choose_us_center">
+                     <img class="w-100" src="images/whychoose1.png" alt="">
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="why_choose_us_right text-end">
+                    <div class="item">
+                        <div class="why_choose_us_desc">
+                          <h3>Dedicated Team</h3>
+                        
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                        <img src="images/4.png" alt="">
+                    </div>
+
+                    <div class="item">
+                        <div class="why_choose_us_desc">
+                          <h3>Dedicated Team</h3>
+                         
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                         <img src="images/4.png" alt="">
+                      </div>
+      
+                    <div class="item">
+                      <div class="why_choose_us_desc">
+                        <h3>Dedicated Team</h3>
+                       
+                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      </div>
+                      <img src="images/4.png" alt="">
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </section>
+        <br><br><br><br><br><br>
+  </main>
+
+
+  <footer>
+      <div class="footer_container bg-dark py-5">
+         <div class="row mb-4">
+            <div class="col">
+               <div class="footer_img_title d-flex justify-content-center align-items-center">
+                  <img class="me-2" src="images/logo.png" alt="">
+                  <h2 class="text-light mt-3">Fruit Burst</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="footer_link">
+                  <ul class="d-flex justify-content-center align-items-center">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">All Fruits</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">My Account</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="footer_social d-flex justify-content-center">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
